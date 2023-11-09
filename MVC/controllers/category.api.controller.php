@@ -49,24 +49,33 @@
             if(!empty($categories)){
                 $this->view->response($categories,200);
             }else{
-                $this->view->response(['No hat categorias'],400);
+                $this->view->response(['No hay categorias'],400);
             }
 
         }
 
-        public function modifyCategory($id, $name, $season) {
-            if (empty($id) || empty($name) || empty($season)) {
-                $this->view->response(['Completa los campos!'], 400);
+        public function updateCategory($params = []) {
+            // Obtener datos del cuerpo de la solicitud
+            $body = $this->getData();
+        
+            // Verificar si los campos requeridos se han proporcionado
+            if (empty($body->name) || empty($body->season) || empty($params[':ID'])) {
+                $this->view->response(['Completa los campos requeridos.'], 400);
                 return;
             }
-            // actualización en la base de datos
+        
+            // Obtener el ID del parámetro de la URL
+            $id = $params[':ID'];
+        
+            // Realizar la actualización en la base de datos
+            $name = $body->name;
+            $season = $body->season;
             $result = $this->model->modifyCategory($id, $name, $season);
         
-            if ($result) {
+            if($result) {
                 $this->view->response(['Se actualizó correctamente con el id = ' . $id], 200);
-            } else {
+            }else{
                 $this->view->response(['No se encontró una categoría con el ID proporcionado'], 404);
             }
         }
-        
     }

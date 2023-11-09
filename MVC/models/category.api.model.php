@@ -29,7 +29,6 @@
 
         public function modifyCategory($id,$name,$season){
             $query=$this->db->prepare('UPDATE category SET name=?, season=? WHERE id=?');
-            $query->execute([$id,$name,$season]);
-            return $query->fetch(PDO::FETCH_OBJ);
+            $query->execute([$name,$season,$id]);
         }
     }
