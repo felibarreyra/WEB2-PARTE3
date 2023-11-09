@@ -51,7 +51,22 @@
             }else{
                 $this->view->response(['No hat categorias'],400);
             }
-           
 
         }
+
+        public function modifyCategory($id, $name, $season) {
+            if (empty($id) || empty($name) || empty($season)) {
+                $this->view->response(['Completa los campos!'], 400);
+                return;
+            }
+            // actualización en la base de datos
+            $result = $this->model->modifyCategory($id, $name, $season);
+        
+            if ($result) {
+                $this->view->response(['Se actualizó correctamente con el id = ' . $id], 200);
+            } else {
+                $this->view->response(['No se encontró una categoría con el ID proporcionado'], 404);
+            }
+        }
+        
     }
