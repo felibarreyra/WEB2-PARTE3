@@ -55,25 +55,16 @@
         }
 
         public function updateCategory($params = []) {
-            // Obtener datos del cuerpo de la solicitud
-            $body = $this->getData();
-        
-            // Verificar si los campos requeridos se han proporcionado
-            if (empty($body->name) || empty($body->season) || empty($params[':ID'])) {
-                $this->view->response(['Completa los campos requeridos.'], 400);
-                return;
-            }
-        
-            // Obtener el ID del parámetro de la URL
-            $id = $params[':ID'];
-        
-            // Realizar la actualización en la base de datos
-            $name = $body->name;
-            $season = $body->season;
-            $result = $this->model->modifyCategory($id, $name, $season);
-        
-            if($result) {
-                $this->view->response(['Se actualizó correctamente con el id = ' . $id], 200);
+           $id=$params[':ID'];
+           $category=$this->model->getCategory($id);
+
+           if($category){
+            $body=$this->getData();
+            $name=$body->name;
+            $season=$body->season;
+
+            $this->model->updateCategory($name,$season,$id);
+            $this->view->response(['Se actualizó correctamente con el id = ' . $id], 200);
             }else{
                 $this->view->response(['No se encontró una categoría con el ID proporcionado'], 404);
             }
