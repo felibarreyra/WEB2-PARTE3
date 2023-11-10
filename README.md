@@ -1,6 +1,8 @@
 # WEB2-PARTE3
 ALUMNO: Felipe Barreyra
 
+CATEGORIAS
+
 Miembro B: 
 Obtener un elemento por ID->  http://localhost/WEBTP3/MVC/api/category/:id (trae una categoria por id).
 
