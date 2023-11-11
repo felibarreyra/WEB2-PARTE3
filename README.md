@@ -23,6 +23,16 @@ PARA INSERTAR SE DEBE ENVIAR UN JSON DE LA SIGUIENTE MANERA: (name y season son 
 }
 
 
+Ordenado-> http://localhost/WEBTP3/api/categories?sort_by=ID&order=DESC ordena por ID, de manera descendente.
+
+Tambien se puede ordenar por nombre:http://localhost/WEBTP3/api/categories?sort_by=name&order=DESC
+
+Y por temporada: http://localhost/WEBTP3/api/categories?sort_by=season&order=DESC
+
+PD: El orden puede ser ascendente(ASC) o descendente(DESC) cambiando esta parte del endpoint &order=DESC/ASC
+
+
+
 GET obtengo las categorias-> http://localhost/WEBTP3/MVC/api/category (trae todas las categorias).
 
 PUT modifico una categoria->  http://localhost/WEBTP3/MVC/api/category/:id (modifica una categoria).
