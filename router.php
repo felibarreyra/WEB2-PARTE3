@@ -12,6 +12,7 @@
     $router->addRoute('category/:ID','GET','CategoryApiController','getCategoryId');
     $router->addRoute('category','GET','CategoryApiController','getAll');
     $router->addRoute('category/:ID','PUT','CategoryApiController','updateCategory');
+    $router->addRoute('categories','GET','CategoryApiController','get');
 
 
 
