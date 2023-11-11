@@ -1,10 +1,10 @@
 # WEB2-PARTE3
-ALUMNO: Felipe Barreyra
+** #ALUMNO: Felipe Barreyra
 
-CATEGORIAS
+##CATEGORIAS
 
 Miembro B: 
-Obtener un elemento por ID->  http://localhost/WEBTP3/MVC/api/category/:id (trae una categoria por id en formato JSON).
+-Obtener un elemento por ID->  http://localhost/WEBTP3/MVC/api/category/:id (trae una categoria por id en formato JSON)
 
 SI EL ID FUERA =1 POR EJEMPLO;
 {
@@ -14,8 +14,7 @@ SI EL ID FUERA =1 POR EJEMPLO;
 }
   
 
-POST inserto una categoria->  http://localhost/WEBTP3/MVC/api/category (se agrega una categoria).
-
+-POST inserto una categoria->  http://localhost/WEBTP3/MVC/api/category (se agrega una categoria)
 PARA INSERTAR SE DEBE ENVIAR UN JSON DE LA SIGUIENTE MANERA: (name y season son VARCHAR)
 {
     "name": "Malla",
@@ -23,7 +22,7 @@ PARA INSERTAR SE DEBE ENVIAR UN JSON DE LA SIGUIENTE MANERA: (name y season son 
 }
 
 
-Ordenado-> http://localhost/WEBTP3/api/categories?sort_by=ID&order=DESC ordena por ID, de manera descendente.
+-Ordenado-> http://localhost/WEBTP3/api/categories?sort_by=ID&order=DESC ordena por ID, de manera descendente
 
 Tambien se puede ordenar por nombre:http://localhost/WEBTP3/api/categories?sort_by=name&order=DESC
 
@@ -33,9 +32,9 @@ PD: El orden puede ser ascendente(ASC) o descendente(DESC) cambiando esta parte 
 
 
 
-GET obtengo las categorias-> http://localhost/WEBTP3/MVC/api/category (trae todas las categorias).
+-GET obtengo las categorias-> http://localhost/WEBTP3/MVC/api/category (trae todas las categorias)
 
-PUT modifico una categoria->  http://localhost/WEBTP3/MVC/api/category/:id (modifica una categoria).
+-PUT modifico una categoria->  http://localhost/WEBTP3/MVC/api/category/:id (modifica una categoria)
 
 SELECCIONAS LA CATEGORIA CON EL ID QUE QUERES MODIFICAR Y ENVIAS DE ESTA FORMA: (name y season son VARCHAR)
 
@@ -45,3 +44,4 @@ SELECCIONAS LA CATEGORIA CON EL ID QUE QUERES MODIFICAR Y ENVIAS DE ESTA FORMA: 
 }
 
 
+**
