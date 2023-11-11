@@ -73,7 +73,7 @@ class CategoryApiController extends ApiController
                 $categories = $this->model->getCategoryPaginados($sort_by, $order, $page, $per_page);
                 return $this->view->response($categories, 200);
             } else {
-                return $this->view->response(['Complete los campos'], 200);
+                return $this->view->response(['Complete los campos'],400);
             }
         } else {
             $category = $this->model->getCategory($params[':ID']);
