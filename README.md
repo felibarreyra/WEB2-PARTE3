@@ -4,8 +4,7 @@
 Felipe Barreyra
 
 ## Descripción
-ecommerce-ropa
-Este proyecto implementa una API para gestionar categorías de productos.
+Este proyecto implementa una API para gestionar categorías de productos en un E-commerce de ropa.
 
 ## Endpoints
 
