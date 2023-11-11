@@ -16,7 +16,7 @@ SI EL ID FUERA =1 POR EJEMPLO;
 
 POST inserto una categoria->  http://localhost/WEBTP3/MVC/api/category (se agrega una categoria).
 
-PARA INSERTAR SE DEBE ENVIAR UN JSON DE LA SIGUIENTE MANERA:
+PARA INSERTAR SE DEBE ENVIAR UN JSON DE LA SIGUIENTE MANERA: (name y season son VARCHAR)
 {
     "name": "Malla",
     "season": "Verano"
@@ -27,7 +27,7 @@ GET obtengo las categorias-> http://localhost/WEBTP3/MVC/api/category (trae toda
 
 PUT modifico una categoria->  http://localhost/WEBTP3/MVC/api/category/:id (modifica una categoria).
 
-SELECCIONAS LA CATEGORIA CON EL ID QUE QUERES MODIFICAR Y ENVIAS DE ESTA FORMA:
+SELECCIONAS LA CATEGORIA CON EL ID QUE QUERES MODIFICAR Y ENVIAS DE ESTA FORMA: (name y season son VARCHAR)
 
 {
     "name": "Malla",
