@@ -1,4 +1,4 @@
-# WEB2-PARTE3 - Categorías API
+# WEB2-PARTE3 - Categorías API para E-commerce de Ropa
 
 ## Alumno
 Felipe Barreyra
@@ -65,8 +65,4 @@ Este proyecto implementa una API para gestionar categorías de productos en un E
       "name": "Malla",
       "season": "Verano"
   }
-<<<<<<< HEAD
   ```
-=======
-  ```
->>>>>>> 38336a49b89e4a598df78cd0285b6b1159f30c21
