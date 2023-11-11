@@ -26,6 +26,7 @@ Este proyecto implementa una API para gestionar categorías de productos en un E
 - **Endpoint**: `http://localhost/WEBTP3/MVC/api/category`
 - **Método**: POST
 - **Descripción**: Agrega una nueva categoría.
+- name y season son VARCHAR.
 
   **Formato JSON de solicitud:**
   ```
@@ -61,6 +62,7 @@ Este proyecto implementa una API para gestionar categorías de productos en un E
 - **Endpoint**: `http://localhost/WEBTP3/MVC/api/category/:id`
 - **Método**: PUT
 - **Descripción**: Modifica una categoría existente.
+- name y season son VARCHAR.
 
   **Formato JSON de solicitud:**
   ```
