@@ -1,47 +1,68 @@
-# WEB2-PARTE3
-** #ALUMNO: Felipe Barreyra
+# WEB2-PARTE3 - Categorías API
 
-##CATEGORIAS
+## Alumno
+Felipe Barreyra
 
-Miembro B: 
--Obtener un elemento por ID->  http://localhost/WEBTP3/MVC/api/category/:id (trae una categoria por id en formato JSON)
+## Descripción
+Este proyecto implementa una API para gestionar categorías de productos.
 
-SI EL ID FUERA =1 POR EJEMPLO;
-{
-    "id": "1",
-    "name": "Cinturon",
-    "season": "Verano"
-}
+## Endpoints
+
+### 1. Obtener un elemento por ID
+- **Endpoint**: `http://localhost/WEBTP3/MVC/api/category/:id`
+- **Método**: GET
+- **Descripción**: Retorna una categoría específica por ID en formato JSON.
   
+  **Ejemplo de respuesta para ID = 1:**
+  ```
+  {
+      "id": "1",
+      "name": "Cinturón",
+      "season": "Verano"
+  }
+  ```
 
--POST inserto una categoria->  http://localhost/WEBTP3/MVC/api/category (se agrega una categoria)
-PARA INSERTAR SE DEBE ENVIAR UN JSON DE LA SIGUIENTE MANERA: (name y season son VARCHAR)
-{
-    "name": "Malla",
-    "season": "Verano"
-}
+### 2. Insertar una nueva categoría
+- **Endpoint**: `http://localhost/WEBTP3/MVC/api/category`
+- **Método**: POST
+- **Descripción**: Agrega una nueva categoría.
 
+  **Formato JSON de solicitud:**
+  ```
+  {
+      "name": "Malla",
+      "season": "Verano"
+  }
+  ```
 
--Ordenado-> http://localhost/WEBTP3/api/categories?sort_by=ID&order=DESC ordena por ID, de manera descendente
+### 3. Obtener categorías ordenadas
+- **Endpoint**: `http://localhost/WEBTP3/api/categories`
+- **Método**: GET
+- **Descripción**: Retorna todas las categorías ordenadas según el parámetro especificado.
 
-Tambien se puede ordenar por nombre:http://localhost/WEBTP3/api/categories?sort_by=name&order=DESC
+  **Parámetros de consulta:**
+   - `sort_by`: Puede ser "ID", "name" o "season".
+   - `order`: Puede ser "ASC" (ascendente) o "DESC" (descendente).
 
-Y por temporada: http://localhost/WEBTP3/api/categories?sort_by=season&order=DESC
+  **Ejemplos de uso:**
+  - Ordenar por ID de manera descendente: `http://localhost/WEBTP3/api/categories?sort_by=ID&order=DESC`
+  - Ordenar por nombre de manera descendente: `http://localhost/WEBTP3/api/categories?sort_by=name&order=DESC`
+  - Ordenar por temporada de manera descendente: `http://localhost/WEBTP3/api/categories?sort_by=season&order=DESC`
 
-PD: El orden puede ser ascendente(ASC) o descendente(DESC) cambiando esta parte del endpoint &order=DESC/ASC
+### 4. Obtener todas las categorías
+- **Endpoint**: `http://localhost/WEBTP3/MVC/api/category`
+- **Método**: GET
+- **Descripción**: Retorna todas las categorías.
 
+### 5. Modificar una categoría
+- **Endpoint**: `http://localhost/WEBTP3/MVC/api/category/:id`
+- **Método**: PUT
+- **Descripción**: Modifica una categoría existente.
 
-
--GET obtengo las categorias-> http://localhost/WEBTP3/MVC/api/category (trae todas las categorias)
-
--PUT modifico una categoria->  http://localhost/WEBTP3/MVC/api/category/:id (modifica una categoria)
-
-SELECCIONAS LA CATEGORIA CON EL ID QUE QUERES MODIFICAR Y ENVIAS DE ESTA FORMA: (name y season son VARCHAR)
-
-{
-    "name": "Malla",
-    "season": "Verano"
-}
-
-
-**
+  **Formato JSON de solicitud:**
+  ```
+  {
+      "name": "Malla",
+      "season": "Verano"
+  }
+  ```
