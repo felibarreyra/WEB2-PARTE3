@@ -54,9 +54,9 @@ Este proyecto implementa una API para gestionar categorías de productos en un E
   - Ordenar por temporada de manera ascendente: `http://localhost/WEBTP3/api/categories?sort_by=season&order=ASC`
 
   **Ademas podes elegir cuantas paginas queres y cuantas categorias por pagina:**
-    -Con los parametros:
-    -$page(INT).
-    -$per_page(int).
+  -Con los parametros:
+  -$page(INT).
+  -$per_page(int).
 
     -http://localhost/WEBTP3/api/categories?sort_by=ID&order=DESC&page=1&per_page=2
 
